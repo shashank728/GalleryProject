@@ -1,0 +1,19 @@
+.custom-select {
+    position: relative;
+  }
+  .custom-select .dropdown-menu {
+    width: 100%;
+  }
+  .custom-select .form-control {
+    cursor: pointer;
+  }
+  .custom-select .clear-btn {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+  }

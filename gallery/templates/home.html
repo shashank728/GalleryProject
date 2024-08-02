@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load static %}
+
+  {% block title %}
+  Gallery Home
+  {% endblock  %}
+  
+
+  {% block link %}
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'css/home.css' %}">
+  {% endblock  %}
+
+{% block body %}
+<!-- Header Section -->
+ <div class="background img-fluid">
+
+   <header class="bg-warning text-black text-center py-1 mb-4">
+     <div class="container">
+       <h1 class="font-weight-light">GalleryApp</h1>
+       <p class="lead">A place to showcase beautiful images</p>
+      </div>
+    </header>
+    
+    <div class=" button container-fluid d-flex justify-content-center mt-5">
+      <div class="button">
+        <a class="btn btn-warning btn-lg" href="{% url 'category' %}">Open</a>
+      </div>
+    </div>
+  </div>
+    {% endblock  %}

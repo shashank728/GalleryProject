@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+Gallery 
+{% endblock  %}
+
+{% block link %}
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="{% static 'css/gallery.css' %}">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+{% endblock  %}
+
+
+{% block body %}
+
+<div class="container">
+    <div class="row">
+
+        {% comment %} {% if  img.category  is "nature" %} {% endcomment %}
+
+            {% for imgs in img %}
+
+                <div class="col-lg-4 col-md-6 gallery-item mt-1">
+                    <img class="img-fluid" src="{{ imgs.img.url }}" alt="loading...">
+                    <a style="font-size: 150%" class="fs-5 text-danger d-flex justify-content-center"href="{% url 'delete' imgs.id %}"><i class="bi bi-trash3-fill"></i></a>
+                    
+                </div>
+            {% endfor %}
+
+        {% comment %} {% endif %} {% endcomment %}
+    </div>
+</div>
+
+
+{% endblock  %}

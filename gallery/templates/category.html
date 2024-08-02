@@ -1,0 +1,100 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+Gallery 
+{% endblock  %}
+
+{% block link %}
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+<link rel="stylesheet" href="{% static 'css/category.css' %}">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+{% endblock  %}
+
+
+{% block body %}
+
+
+
+<div class="container ">
+    <div class="row mt-4 d-flex justify-content-around">
+
+        <div class="col-md-4 mt-3 folder">
+            <a href="{% url 'gallery' %}">
+
+                <div class="card  " style="width: 20rem;">
+                    <img src="{% static 'img/nature.avif' %}" class="card-img-top height" alt="...">
+                    <div class="card-body" >
+                        <h5 class="  card-title text-center">Nature </h5>            
+                    </div>
+                </div>
+            </a> 
+            </div>
+            
+
+        <div class="col-md-4 mt-3 folder">  
+            <a href="">
+
+                <div class="card  " style="width: 20rem;">
+                    <img src="{% static 'img/car.avif' %}" class="card-img-top height" alt="...">
+                    <div class="card-body" >
+                        <h5 class="card-title text-center">Car</h5>           
+                    </div>
+                </div>   
+            </a> 
+        </div>
+
+        
+        <div class="col-md-4  mt-3 folder">
+            <a href="">
+
+                <div class="card " style="width: 20rem;">
+                    <img src="{% static 'img/family.avif' %}" class="card-img-top height" alt="...">
+                    <div class="card-body" >
+                        <h5 class="card-title text-center">Family</h5>         
+                    </div>
+                </div>
+            </a>
+        </div>
+
+
+
+        <div class="col-md-4 mt-4 folder"> 
+            <div class="card " style="width: 20rem;">
+                <img src="{% static 'img/background.avif' %}" class="card-img-top height" alt="...">
+                <div class="card-body" >
+                    <h5 class="card-title text-center">Document</h5>            
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-md-4 mt-4 folder">   
+            <div class="card " style="width: 20rem;">
+                <img src="{% static 'img/background.avif' %}" class="card-img-top height" alt="...">
+                <div class="card-body" >
+                    <h5 class="card-title text-center">Card title</h5>           
+                </div>
+            </div>   
+        </div>
+
+        
+        <div class="col-md-4 mt-4 folder">
+            <div class="card " style="width: 20rem;">
+                <img src="{% static 'img/background.avif' %}" class="card-img-top height" alt="...">
+                <div class="card-body" >
+                    <h5 class="card-title text-center">Card title</h5>         
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+    </div>
+</div>
+
+
+{% endblock  %}
