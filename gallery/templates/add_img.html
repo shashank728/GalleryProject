@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block title %}
-profile
+Add image
 {% endblock  %}
 
 
@@ -24,6 +24,7 @@ profile
                     <h2>Upload Image</h2>
                 </div>
                 <div class="card-body">
+
                     <form  method="post" enctype="multipart/form-data">
                         
                         {% csrf_token %}
@@ -35,14 +36,18 @@ profile
                         
                         <div class="mb-3">
                             <label for="simpleSelect" class="form-label">Image category type:</label>
+
                             <select class="form-select" id="simpleSelect" name="category">
-                              <option selected disabled>Category..</option>
-                              <option value="nature">Nature</option>
-                              <option value="family">Family</option>
-                              <option value="car">Car</option>
-                              <option value="other">Other</option>
+                              <option selected disabled>Category</option>
+                              <option value="Nature">Nature</option>
+                              <option value="Family">Family</option>
+                              <option value="Car">Car</option>
+                              <option value="Coding">Coding</option>
+                              <option value="Aesthetic">Aesthetic</option>
+                              <option value="Buildings">Buildings</option>
                             </select>
-                          </div>
+                            
+                        </div>
 
                         <button  type="submit" class="btn btn-primary btn-block">Save</button>
                         

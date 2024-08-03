@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+{{ category }} Gallery
+{% endblock %}
+
+{% block body %}
+<div class="container">
+    <h2>{{ category }} Gallery</h2>
+    <div class="row">
+
+        {% for image in images %}
+
+            <div class="col-lg-4 col-md-6 gallery-item mt-1">
+                <img class="img-fluid" src="{{ image.img.url }}" alt="loading...">
+                <a style="font-size: 150%" class="fs-5 text-danger d-flex justify-content-center" href="{% url 'delete' image.id %}"><i class="bi bi-trash3-fill"></i></a>
+            </div>
+            
+        {% endfor %}
+
+    </div>
+</div>
+{% endblock %}
+

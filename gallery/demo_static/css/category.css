@@ -42,9 +42,14 @@ body {
 }
 
 
+.link{
+  text-decoration: none;
+}
+
+
 .folder:hover
 {
-    transform: translateY(-10px);
+  transform: translateY(-10px);
 }
 
 .height
