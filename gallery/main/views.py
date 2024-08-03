@@ -56,6 +56,13 @@ def category(request):
 
     category = Add_img.objects.all()
 
-    return render(request,"category.html")
+    parameter = {
+        "category": category
+    }
+
+    return render(request,"category.html", parameter)
+
+
+
 
 
