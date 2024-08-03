@@ -53,6 +53,9 @@ def delete(request,imgs_id):
 # ================= category ======================
 
 def category(request):
+
+    category = Add_img.objects.all()
+
     return render(request,"category.html")
 
 
