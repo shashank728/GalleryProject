@@ -35,10 +35,7 @@ def add_img(request):
 
         user_img = request.FILES["img"] 
         category = request.POST.get("category")
-        
 
-
-        
         new_user = Add_img(
             img = user_img,
             category = category     
